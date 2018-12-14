@@ -4,7 +4,7 @@
 <div>
   <ul>
     {% if addresses.count > 0 %}
-    {% for address in adresses.all %}
+    {% for address in addresses.all %}
     <li>{{ address.name }}, {{ address.email }}, {{ address.phone }}</li>
     {% endfor %}
     {% else %}
