@@ -1,4 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Hello World!</h1>
+
+<div>
+  <ul>
+    {% if addresses.count > 0 %}
+    {% for address in adresses.all %}
+    <li>{{ address.name }}, {{ address.email }}, {{ address.phone }}</li>
+    {% endfor %}
+    {% else %}
+    <li>No addresses so far.</li>
+    {% endif %}
+  </ul>
+</div>
+
 {% endblock %}
